@@ -27,10 +27,19 @@ open class FormController: UIViewController {
         return sv
     }()
     
+    public var arrangedSubViews: [UIView] {
+        didSet {
+            self.arrangedSubViews.forEach { (view) in
+                formContainerStackView.addArrangedSubview(view)
+            }
+        }
+    }
+    
     fileprivate let alignment: FormAlignment
     
-    public init(alignment: FormAlignment = .top) {
+    public init(alignment: FormAlignment = .top, subViews: [UIView] = []) {
         self.alignment = alignment
+        self.arrangedSubViews = subViews
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -46,7 +55,7 @@ open class FormController: UIViewController {
         scrollView.addSubview(formContainerStackView)
         
         if alignment == .top {
-            formContainerStackView.anchor(top: scrollView.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+            formContainerStackView.anchor(top: scrollView.topAnchor, leading: view.leftAnchor, bottom: nil, trailing: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
         } else {
             formContainerStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
             formContainerStackView.centerVertically(offset: 0)

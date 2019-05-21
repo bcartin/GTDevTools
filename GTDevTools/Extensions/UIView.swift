@@ -25,20 +25,20 @@ extension UIView {
         return nil
     }
     
-    open func anchor(top: NSLayoutYAxisAnchor?, left: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, right: NSLayoutXAxisAnchor?,  paddingTop: CGFloat, paddingLeft: CGFloat, paddingBottom: CGFloat, paddingRight: CGFloat ) {
+    open func anchor(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?,  paddingTop: CGFloat, paddingLeft: CGFloat, paddingBottom: CGFloat, paddingRight: CGFloat ) {
         
         translatesAutoresizingMaskIntoConstraints = false
         if let top = top {
             self.topAnchor.constraint(equalTo: top, constant: paddingTop).isActive = true
         }
-        if let left = left {
-            self.leftAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
+        if let leading = leading {
+            self.leadingAnchor.constraint(equalTo: leading, constant: paddingLeft).isActive = true
         }
         if let bottom = bottom {
             self.bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom).isActive = true
         }
-        if let right = right {
-            rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
+        if let trailing = trailing {
+            self.trailingAnchor.constraint(equalTo: trailing, constant: -paddingRight).isActive = true
         }
     }
     
@@ -91,7 +91,7 @@ extension UIView {
                 let superviewBottomAnchor = superview?.safeAreaLayoutGuide.bottomAnchor,
                 let superviewLeftAnchor = superview?.safeAreaLayoutGuide.leadingAnchor,
                 let superviewRightAnchor = superview?.safeAreaLayoutGuide.trailingAnchor else { return }
-            anchor(top: superviewTopAnchor, left: superviewLeftAnchor, bottom: superviewBottomAnchor, right: superviewRightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+            anchor(top: superviewTopAnchor, leading: superviewLeftAnchor, bottom: superviewBottomAnchor, trailing: superviewRightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
             }
     }
     
@@ -101,7 +101,7 @@ extension UIView {
                 let superviewBottomAnchor = superview?.bottomAnchor,
                 let superviewLeftAnchor = superview?.leadingAnchor,
                 let superviewRightAnchor = superview?.trailingAnchor else { return }
-            anchor(top: superviewTopAnchor, left: superviewLeftAnchor, bottom: superviewBottomAnchor, right: superviewRightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+            anchor(top: superviewTopAnchor, leading: superviewLeftAnchor, bottom: superviewBottomAnchor, trailing: superviewRightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
         }
     }
     
