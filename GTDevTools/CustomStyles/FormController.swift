@@ -4,11 +4,11 @@
 //
 //  Created by Bernie Cartin on 5/21/19.
 //  Copyright © 2019 Garson Tech. All rights reserved.
-//
+//  Changes
 
 import UIKit
 
-open class LBTAFormController: UIViewController {
+open class FormController: UIViewController {
     
     var lowestElement: UIView!
     public lazy var scrollView: UIScrollView = {

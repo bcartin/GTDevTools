@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CustomTextField: UITextField {
+open class CustomTextField: UITextField {
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.lightGray.cgColor
@@ -20,7 +20,7 @@ class CustomTextField: UITextField {
         self.setSizeAnchors(height: 44, width: nil)
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.lightGray.cgColor
