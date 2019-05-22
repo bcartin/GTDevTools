@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB1B93D922958E9D004A9A8E /* DateSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B93D822958E9D004A9A8E /* DateSelector.swift */; };
+		CB1B93DF2295C82C004A9A8E /* OptionsSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B93DE2295C82C004A9A8E /* OptionsSelector.swift */; };
 		CB20B56122947BFA0082F111 /* GTDevTools.h in Headers */ = {isa = PBXBuildFile; fileRef = CB20B55F22947BFA0082F111 /* GTDevTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB20B56922947D4D0082F111 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20B56822947D4D0082F111 /* UIView.swift */; };
 		CB20B56B22947E200082F111 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20B56A22947E200082F111 /* UIViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB1B93D822958E9D004A9A8E /* DateSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelector.swift; sourceTree = "<group>"; };
+		CB1B93DE2295C82C004A9A8E /* OptionsSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsSelector.swift; sourceTree = "<group>"; };
 		CB20B55C22947BFA0082F111 /* GTDevTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTDevTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB20B55F22947BFA0082F111 /* GTDevTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTDevTools.h; sourceTree = "<group>"; };
 		CB20B56022947BFA0082F111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 			children = (
 				CB20B575229488050082F111 /* CustomTextField.swift */,
 				CB20B577229488EB0082F111 /* FormController.swift */,
+				CB1B93D822958E9D004A9A8E /* DateSelector.swift */,
+				CB1B93DE2295C82C004A9A8E /* OptionsSelector.swift */,
 			);
 			path = CustomStyles;
 			sourceTree = "<group>";
@@ -176,9 +182,11 @@
 				CB20B56B22947E200082F111 /* UIViewController.swift in Sources */,
 				CB20B56922947D4D0082F111 /* UIView.swift in Sources */,
 				CB20B56D22947F9A0082F111 /* UIImageView.swift in Sources */,
+				CB1B93DF2295C82C004A9A8E /* OptionsSelector.swift in Sources */,
 				CB20B56F229483990082F111 /* UIColor.swift in Sources */,
 				CB20B573229484620082F111 /* UIButton.swift in Sources */,
 				CB20B578229488EB0082F111 /* FormController.swift in Sources */,
+				CB1B93D922958E9D004A9A8E /* DateSelector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

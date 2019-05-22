@@ -12,21 +12,26 @@ open class CustomTextField: UITextField {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        layer.borderWidth = 0.5
-        layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 1
-        font = UIFont.systemFont(ofSize: 14)
-        backgroundColor = .white
-        self.setSizeAnchors(height: 44, width: nil)
+        fieldInit(backgroundColor: .white)
     }
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
+        fieldInit(backgroundColor: .white)
+    }
+    
+    public init(placeholder: String, backgroundColor: UIColor = .white) {
+        super.init(frame: .zero)
+        fieldInit(backgroundColor: backgroundColor)
+        self.placeholder = placeholder
+    }
+    
+    func fieldInit(backgroundColor: UIColor) {
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 1
+        layer.cornerRadius = 5
         font = UIFont.systemFont(ofSize: 14)
-        backgroundColor = .white
+        self.backgroundColor = backgroundColor
         self.setSizeAnchors(height: 44, width: nil)
     }
     
