@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		CB1B93D922958E9D004A9A8E /* DateSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B93D822958E9D004A9A8E /* DateSelector.swift */; };
 		CB1B93DF2295C82C004A9A8E /* OptionsSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B93DE2295C82C004A9A8E /* OptionsSelector.swift */; };
+		CB1B93E12295D79F004A9A8E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B93E02295D79F004A9A8E /* UIStackView.swift */; };
+		CB1B93E32295D7DA004A9A8E /* ListHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B93E22295D7DA004A9A8E /* ListHeaderController.swift */; };
+		CB1B93E52295D7F6004A9A8E /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B93E42295D7F6004A9A8E /* ListCell.swift */; };
+		CB1B93E72295D97E004A9A8E /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B93E62295D97E004A9A8E /* ListController.swift */; };
 		CB20B56122947BFA0082F111 /* GTDevTools.h in Headers */ = {isa = PBXBuildFile; fileRef = CB20B55F22947BFA0082F111 /* GTDevTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB20B56922947D4D0082F111 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20B56822947D4D0082F111 /* UIView.swift */; };
 		CB20B56B22947E200082F111 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20B56A22947E200082F111 /* UIViewController.swift */; };
@@ -23,6 +27,10 @@
 /* Begin PBXFileReference section */
 		CB1B93D822958E9D004A9A8E /* DateSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelector.swift; sourceTree = "<group>"; };
 		CB1B93DE2295C82C004A9A8E /* OptionsSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsSelector.swift; sourceTree = "<group>"; };
+		CB1B93E02295D79F004A9A8E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		CB1B93E22295D7DA004A9A8E /* ListHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderController.swift; sourceTree = "<group>"; };
+		CB1B93E42295D7F6004A9A8E /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		CB1B93E62295D97E004A9A8E /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		CB20B55C22947BFA0082F111 /* GTDevTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTDevTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB20B55F22947BFA0082F111 /* GTDevTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTDevTools.h; sourceTree = "<group>"; };
 		CB20B56022947BFA0082F111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +91,7 @@
 				CB20B56E229483990082F111 /* UIColor.swift */,
 				CB20B570229484200082F111 /* UILabel.swift */,
 				CB20B572229484620082F111 /* UIButton.swift */,
+				CB1B93E02295D79F004A9A8E /* UIStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -94,6 +103,9 @@
 				CB20B577229488EB0082F111 /* FormController.swift */,
 				CB1B93D822958E9D004A9A8E /* DateSelector.swift */,
 				CB1B93DE2295C82C004A9A8E /* OptionsSelector.swift */,
+				CB1B93E22295D7DA004A9A8E /* ListHeaderController.swift */,
+				CB1B93E42295D7F6004A9A8E /* ListCell.swift */,
+				CB1B93E62295D97E004A9A8E /* ListController.swift */,
 			);
 			path = CustomStyles;
 			sourceTree = "<group>";
@@ -179,14 +191,18 @@
 			files = (
 				CB20B576229488050082F111 /* CustomTextField.swift in Sources */,
 				CB20B571229484200082F111 /* UILabel.swift in Sources */,
+				CB1B93E32295D7DA004A9A8E /* ListHeaderController.swift in Sources */,
 				CB20B56B22947E200082F111 /* UIViewController.swift in Sources */,
 				CB20B56922947D4D0082F111 /* UIView.swift in Sources */,
+				CB1B93E52295D7F6004A9A8E /* ListCell.swift in Sources */,
 				CB20B56D22947F9A0082F111 /* UIImageView.swift in Sources */,
 				CB1B93DF2295C82C004A9A8E /* OptionsSelector.swift in Sources */,
 				CB20B56F229483990082F111 /* UIColor.swift in Sources */,
 				CB20B573229484620082F111 /* UIButton.swift in Sources */,
 				CB20B578229488EB0082F111 /* FormController.swift in Sources */,
 				CB1B93D922958E9D004A9A8E /* DateSelector.swift in Sources */,
+				CB1B93E12295D79F004A9A8E /* UIStackView.swift in Sources */,
+				CB1B93E72295D97E004A9A8E /* ListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
