@@ -55,7 +55,7 @@ open class FormController: UIViewController {
         scrollView.addSubview(formContainerStackView)
         
         if alignment == .top {
-            formContainerStackView.anchor(top: scrollView.topAnchor, leading: view.leftAnchor, bottom: nil, trailing: view.rightAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
+            formContainerStackView.anchor(top: scrollView.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
         } else {
             formContainerStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
             formContainerStackView.centerVertically(offset: 0)

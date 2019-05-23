@@ -53,7 +53,7 @@ class DateSelector: UIView {
     }
 }
 
-protocol DateSelectorDelegate: UIViewController {}
+public protocol DateSelectorDelegate: UIViewController {}
 
 extension DateSelectorDelegate where Self : UIViewController {
     

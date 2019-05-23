@@ -61,13 +61,21 @@ extension UIButton {
         setSizeAnchors(height: 44, width: 150)
     }
     
-    convenience public init(image: UIImage, tintColor: UIColor? = nil) {
+    convenience public init(image: UIImage, tintColor: UIColor? = nil, size: CGSize? = nil, target: Any? = nil, action: Selector? = nil) {
         self.init(type: .system)
+        clipsToBounds = true
+        imageView?.contentMode = .scaleAspectFill
         if tintColor == nil {
             setImage(image, for: .normal)
         } else {
             setImage(image.withRenderingMode(.alwaysTemplate), for: .normal)
             self.tintColor = tintColor
+        }
+        if let action = action {
+            addTarget(target, action: action, for: .touchUpInside)
+        }
+        if let size = size {
+            setSizeAnchors(height: size.height, width: size.width)
         }
         
     }

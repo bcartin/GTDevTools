@@ -74,7 +74,7 @@ class OptionsSelector: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
     }
 }
 
-protocol OptionsSelectorDelegate: UIViewController {}
+public protocol OptionsSelectorDelegate: UIViewController {}
 
 extension OptionsSelectorDelegate where Self : UIViewController {
     

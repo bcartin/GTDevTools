@@ -109,7 +109,7 @@ extension UIViewController: UITextFieldDelegate, UITextViewDelegate {
     
 }
 
-protocol Alertable {}
+public protocol Alertable {}
 
 extension Alertable where Self: UIViewController {
     

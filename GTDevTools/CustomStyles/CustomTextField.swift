@@ -20,10 +20,12 @@ open class CustomTextField: UITextField {
         fieldInit(backgroundColor: .white)
     }
     
-    public init(placeholder: String, backgroundColor: UIColor = .white) {
+    public init(placeholder: String, backgroundColor: UIColor = .white, keyboardType: UIKeyboardType = .default, isSecureText: Bool = false) {
         super.init(frame: .zero)
         fieldInit(backgroundColor: backgroundColor)
         self.placeholder = placeholder
+        self.keyboardType = keyboardType
+        self.isSecureTextEntry = isSecureText
     }
     
     func fieldInit(backgroundColor: UIColor) {
