@@ -113,14 +113,14 @@ public protocol Alertable {}
 
 extension Alertable where Self: UIViewController {
     
-    func showAlert(title: String, msg: String?) {
+    public func showAlert(title: String, msg: String?) {
         let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(action)
         present(alertController, animated: true, completion: nil)
     }
     
-    func showMessage(message: String, center: CGPoint?) {
+    public func showMessage(message: String, center: CGPoint?) {
         DispatchQueue.main.async {
             let savedLabel = UILabel()
             savedLabel.text = message
