@@ -22,6 +22,7 @@
 		CB20B573229484620082F111 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20B572229484620082F111 /* UIButton.swift */; };
 		CB20B576229488050082F111 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20B575229488050082F111 /* CustomTextField.swift */; };
 		CB20B578229488EB0082F111 /* FormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20B577229488EB0082F111 /* FormController.swift */; };
+		CB8EBBD92298897700477E3F /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EBBD82298897700477E3F /* Tools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CB20B572229484620082F111 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		CB20B575229488050082F111 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		CB20B577229488EB0082F111 /* FormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormController.swift; sourceTree = "<group>"; };
+		CB8EBBD82298897700477E3F /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		CB20B55E22947BFA0082F111 /* GTDevTools */ = {
 			isa = PBXGroup;
 			children = (
+				CB8EBBD72298891700477E3F /* Custom Tools */,
 				CB20B574229487F50082F111 /* CustomStyles */,
 				CB20B56722947D320082F111 /* Extensions */,
 				CB20B55F22947BFA0082F111 /* GTDevTools.h */,
@@ -108,6 +111,14 @@
 				CB1B93E62295D97E004A9A8E /* ListController.swift */,
 			);
 			path = CustomStyles;
+			sourceTree = "<group>";
+		};
+		CB8EBBD72298891700477E3F /* Custom Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CB8EBBD82298897700477E3F /* Tools.swift */,
+			);
+			path = "Custom Tools";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 				CB20B56D22947F9A0082F111 /* UIImageView.swift in Sources */,
 				CB1B93DF2295C82C004A9A8E /* OptionsSelector.swift in Sources */,
 				CB20B56F229483990082F111 /* UIColor.swift in Sources */,
+				CB8EBBD92298897700477E3F /* Tools.swift in Sources */,
 				CB20B573229484620082F111 /* UIButton.swift in Sources */,
 				CB20B578229488EB0082F111 /* FormController.swift in Sources */,
 				CB1B93D922958E9D004A9A8E /* DateSelector.swift in Sources */,
