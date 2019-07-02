@@ -44,4 +44,16 @@ extension UIStackView {
         layoutMargins.right = right
         return self
     }
+    
+    @discardableResult
+    open func withAxis(_ axis: NSLayoutConstraint.Axis) -> UIView {
+        self.axis = axis
+        return self
+    }
+    
+    @discardableResult
+    open func withSpacing(_ spacing: CGFloat) -> UIView {
+        self.spacing = spacing
+        return self
+    }
 }

@@ -35,9 +35,15 @@ extension UIImageView {
             }.resume()
     }
     
-    convenience public init(image: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill) {
+    convenience public init(image: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill, size: CGSize? = nil, cornerRadius: CGFloat? = nil) {
         self.init(image: image)
         self.contentMode = contentMode
         self.clipsToBounds = true
+        if let size = size {
+            setSizeAnchors(height: size.height, width: size.width)
+        }
+        if let cornerRadius = cornerRadius {
+            layer.cornerRadius = cornerRadius
+        }
     }
 }

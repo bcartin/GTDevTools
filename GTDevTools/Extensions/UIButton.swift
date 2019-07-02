@@ -41,7 +41,7 @@ extension UIButton {
             }.resume()
     }
     
-    convenience public init(style: UIButtonStyle, title: String, titleColor: UIColor, font: UIFont = .systemFont(ofSize: 14), backgroundColor: UIColor = .clear, target: Any? = nil, action: Selector? = nil) {
+    convenience public init(style: UIButtonStyle = .square, title: String, titleColor: UIColor, font: UIFont = .systemFont(ofSize: 14), backgroundColor: UIColor = .clear, target: Any? = nil, action: Selector? = nil) {
         self.init(type: .system)
         setTitle(title, for: .normal)
         setTitleColor(titleColor, for: .normal)
@@ -61,7 +61,7 @@ extension UIButton {
         setSizeAnchors(height: 44, width: 150)
     }
     
-    convenience public init(image: UIImage, tintColor: UIColor? = nil, size: CGSize? = nil, target: Any? = nil, action: Selector? = nil) {
+    convenience public init(image: UIImage, tintColor: UIColor? = nil, size: CGSize? = nil, target: Any? = nil, action: Selector? = nil, cornerRadius: CGFloat? = nil) {
         self.init(type: .system)
         clipsToBounds = true
         imageView?.contentMode = .scaleAspectFill
@@ -76,6 +76,9 @@ extension UIButton {
         }
         if let size = size {
             setSizeAnchors(height: size.height, width: size.width)
+        }
+        if let cornerRadius = cornerRadius {
+            layer.cornerRadius = cornerRadius
         }
         
     }

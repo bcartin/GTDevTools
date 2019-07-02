@@ -52,6 +52,8 @@ open class ListHeaderController<T: ListCell<U>, U, H: UICollectionReusableView>:
     /// Override this to manually set up your header with custom behavior.
     open func setupHeader(_ header: H) {}
     
+    
+    
     override open func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! H
         setupHeader(header)
@@ -74,6 +76,7 @@ open class ListHeaderController<T: ListCell<U>, U, H: UICollectionReusableView>:
      scrollDirection: direction that your cells will be rendered
      
      */
+    
     public init(scrollDirection: UICollectionView.ScrollDirection = .vertical) {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = scrollDirection

@@ -8,17 +8,17 @@
 
 import UIKit
 
-open class Tools {
+open class GTTools {
     
     public init() {}
-    public static let shared = Tools()
+    public static let shared = GTTools()
     
-    public func resizeImage(image: UIImage) -> UIImage {
+    public func resizeImage(image: UIImage, maxSize: CGSize = CGSize(width: 400, height: 700)) -> UIImage {
         var returnImage : UIImage = UIImage()
         var actualHeight = image.size.height
         var actualWidth = image.size.width
-        let maxWidth : CGFloat = 400.0
-        let maxHeight : CGFloat = 700.0
+        let maxWidth = maxSize.width
+        let maxHeight = maxSize.height
         var imageRatio = actualWidth/actualHeight
         let maxRatio = maxWidth/maxHeight
         if actualHeight > maxHeight || actualWidth > maxWidth {
