@@ -12,31 +12,31 @@ open class CustomTextField: UITextField {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        fieldInit(backgroundColor: .white)
+        self.backgroundColor = .white
     }
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        fieldInit(backgroundColor: .white)
+        self.backgroundColor = .white
     }
     
-    public init(placeholder: String, backgroundColor: UIColor = .white, keyboardType: UIKeyboardType = .default, isSecureText: Bool = false) {
+    public init(placeholder: String, backgroundColor: UIColor = .white, borderColor: UIColor? = nil, keyboardType: UIKeyboardType = .default, isSecureText: Bool = false, cornerRadius: CGFloat = 0) {
         super.init(frame: .zero)
-        fieldInit(backgroundColor: backgroundColor)
+        self.backgroundColor = backgroundColor
+        self.setSizeAnchors(height: 44, width: nil)
         self.placeholder = placeholder
         self.keyboardType = keyboardType
         self.isSecureTextEntry = isSecureText
+        self.layer.cornerRadius = cornerRadius
+        self.font = UIFont.systemFont(ofSize: 14)
+        if borderColor != nil {
+            self.layer.borderColor = borderColor?.cgColor
+            layer.borderWidth = 0.5
+        }
     }
     
-    func fieldInit(backgroundColor: UIColor) {
-        layer.borderWidth = 0.5
-        layer.borderColor = UIColor.lightGray.cgColor
-        layer.cornerRadius = 5
-        font = UIFont.systemFont(ofSize: 14)
-        self.backgroundColor = backgroundColor
-        self.setSizeAnchors(height: 44, width: nil)
-    }
     
+
     
     
     let padding = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15)
