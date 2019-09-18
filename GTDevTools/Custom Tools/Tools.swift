@@ -48,4 +48,29 @@ open class GTTools {
         }
         return returnImage
     }
+    
+    public func loadImage(from urlString: String) -> UIImage? {
+        if let cachedImage = imageCache.object(forKey: urlString as NSString) {
+            return cachedImage
+        }
+        if let url = URL(string: urlString) {
+            var image: UIImage?
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if url.absoluteString != urlString {
+                    return
+                }
+                guard let imageData = data else {return}
+                if let photoImage = UIImage(data: imageData) {
+                    imageCache.setObject(photoImage, forKey: url.absoluteString as NSString)
+                    DispatchQueue.main.async {
+                        image = photoImage
+                    }
+                }
+                }.resume()
+            return image
+        }
+        else {
+            return nil
+        }
+    }
 }

@@ -61,6 +61,20 @@ extension UIButton {
         setSizeAnchors(height: 44, width: 150)
     }
     
+    convenience public init(title: String, titleColor: UIColor, font: UIFont = .systemFont(ofSize: 14), size: CGSize = CGSize(width: 150, height: 44), backgroundColor: UIColor = .clear, target: Any? = nil, action: Selector? = nil, cornerRadius: CGFloat = 0) {
+        self.init(type: .system)
+        setTitle(title, for: .normal)
+        setTitleColor(titleColor, for: .normal)
+        self.titleLabel?.font = font
+        self.backgroundColor = backgroundColor
+        if let action = action {
+            addTarget(target, action: action, for: .touchUpInside)
+        }
+        setSizeAnchors(height: size.height, width: size.width)
+        layer.cornerRadius = cornerRadius
+        
+    }
+    
     convenience public init(image: UIImage, tintColor: UIColor? = nil, size: CGSize? = nil, target: Any? = nil, action: Selector? = nil, cornerRadius: CGFloat? = nil) {
         self.init(type: .system)
         clipsToBounds = true
@@ -71,6 +85,50 @@ extension UIButton {
             setImage(image.withRenderingMode(.alwaysTemplate), for: .normal)
             self.tintColor = tintColor
         }
+        if let action = action {
+            addTarget(target, action: action, for: .touchUpInside)
+        }
+        if let size = size {
+            setSizeAnchors(height: size.height, width: size.width)
+        }
+        if let cornerRadius = cornerRadius {
+            layer.cornerRadius = cornerRadius
+        }
+        
+    }
+    
+    convenience public init(imageUrl: String, tintColor: UIColor? = nil, size: CGSize? = nil, target: Any? = nil, action: Selector? = nil, cornerRadius: CGFloat? = nil) {
+        self.init(type: .system)
+        clipsToBounds = true
+        imageView?.contentMode = .scaleAspectFill
+        imageView?.clipsToBounds = true
+        if let cachedImage = imageCache.object(forKey: imageUrl as NSString) {
+            if tintColor == nil {
+                setImage(cachedImage.withRenderingMode(.alwaysOriginal), for: .normal)
+            } else {
+                setImage(cachedImage.withRenderingMode(.alwaysTemplate), for: .normal)
+                self.tintColor = tintColor
+            }
+            return
+        }
+        guard let url = URL(string: imageUrl) else {return}
+        URLSession.shared.dataTask(with: url) { [weak self](data, response, error) in
+            if url.absoluteString != imageUrl {
+                return
+            }
+            guard let imageData = data else {return}
+            if let photoImage = UIImage(data: imageData) {
+                imageCache.setObject(photoImage, forKey: url.absoluteString as NSString)
+                DispatchQueue.main.async {
+                    if tintColor == nil {
+                        self?.setImage(photoImage.withRenderingMode(.alwaysOriginal), for: .normal)
+                    } else {
+                        self?.setImage(photoImage.withRenderingMode(.alwaysTemplate), for: .normal)
+                        self?.tintColor = tintColor
+                    }
+                }
+            }
+            }.resume()
         if let action = action {
             addTarget(target, action: action, for: .touchUpInside)
         }
