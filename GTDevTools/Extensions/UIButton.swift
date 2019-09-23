@@ -61,7 +61,7 @@ extension UIButton {
         setSizeAnchors(height: 44, width: 150)
     }
     
-    convenience public init(title: String, titleColor: UIColor, font: UIFont = .systemFont(ofSize: 14), size: CGSize = CGSize(width: 150, height: 44), backgroundColor: UIColor = .clear, target: Any? = nil, action: Selector? = nil, cornerRadius: CGFloat = 0) {
+    convenience public init(title: String, titleColor: UIColor, font: UIFont = .systemFont(ofSize: 14), size: CGSize?, backgroundColor: UIColor = .clear, target: Any? = nil, action: Selector? = nil, cornerRadius: CGFloat = 0) {
         self.init(type: .system)
         setTitle(title, for: .normal)
         setTitleColor(titleColor, for: .normal)
@@ -70,9 +70,10 @@ extension UIButton {
         if let action = action {
             addTarget(target, action: action, for: .touchUpInside)
         }
-        setSizeAnchors(height: size.height, width: size.width)
-        layer.cornerRadius = cornerRadius
-        
+        if let size = size {
+            setSizeAnchors(height: size.height, width: size.width)
+        }
+        layer.cornerRadius = cornerRadius        
     }
     
     convenience public init(image: UIImage, tintColor: UIColor? = nil, size: CGSize? = nil, target: Any? = nil, action: Selector? = nil, cornerRadius: CGFloat? = nil) {
