@@ -20,25 +20,6 @@ open class CustomTextField: UITextField {
         self.backgroundColor = .white
     }
     
-    public init(placeholder: String, backgroundColor: UIColor = .white, borderColor: UIColor? = nil, keyboardType: UIKeyboardType = .default, isSecureText: Bool = false, cornerRadius: CGFloat = 0) {
-        super.init(frame: .zero)
-        self.backgroundColor = backgroundColor
-        self.setSizeAnchors(height: 44, width: nil)
-        self.placeholder = placeholder
-        self.keyboardType = keyboardType
-        self.isSecureTextEntry = isSecureText
-        self.layer.cornerRadius = cornerRadius
-        self.font = UIFont.systemFont(ofSize: 14)
-        if borderColor != nil {
-            self.layer.borderColor = borderColor?.cgColor
-            layer.borderWidth = 0.5
-        }
-    }
-    
-    
-
-    
-    
     let padding = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15)
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {

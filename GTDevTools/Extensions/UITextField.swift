@@ -22,7 +22,6 @@ extension UITextField {
         self.keyboardType = keyboardType
         self.isSecureTextEntry = isSecureText
         self.layer.cornerRadius = cornerRadius
+        
     }
-    
-    
 }
