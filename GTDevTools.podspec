@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 # 1
 s.platform = :ios
-s.ios.deployment_target = '12.2'
+s.ios.deployment_target = '13.0'
 s.name = "GTDevTools"
 s.summary = "A set of tools for developing apps in swift."
 s.requires_arc = true
