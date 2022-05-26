@@ -55,7 +55,7 @@ class DateSelector: UIView {
 
 public protocol DateSelectorDelegate: UIViewController {}
 
-extension DateSelectorDelegate where Self : UIViewController {
+extension DateSelectorDelegate {
     
     func selectorButtonTapped(dateText: String?, dateFormat: String, _ selectedDate: @escaping(String) -> ())  {
         let vc = UIViewController()

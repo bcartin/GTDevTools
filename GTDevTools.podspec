@@ -2,13 +2,13 @@ Pod::Spec.new do |s|
 
 # 1
 s.platform = :ios
-s.ios.deployment_target = '11.4'
+s.ios.deployment_target = '12.2'
 s.name = "GTDevTools"
 s.summary = "A set of tools for developing apps in swift."
 s.requires_arc = true
 
 # 2
-s.version = "0.1.12"
+s.version = "0.1.14"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
@@ -33,7 +33,7 @@ s.source_files = "GTDevTools/**/*.{swift}"
 # s.resources = "GTDevTools/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
 # 10
-s.swift_version = "4.2"
+s.swift_version = "5.0"
 
 end
 

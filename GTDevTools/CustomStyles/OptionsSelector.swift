@@ -76,7 +76,7 @@ class OptionsSelector: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
 
 public protocol OptionsSelectorDelegate: UIViewController {}
 
-extension OptionsSelectorDelegate where Self : UIViewController {
+extension OptionsSelectorDelegate {
     
     func selectorButtonTapped(optionText: String?, options: [String], optionsPicker: UIPickerView, _ selectedOption: @escaping(Int) -> ())  {
         let vc = UIViewController()
